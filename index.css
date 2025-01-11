@@ -1,560 +1,565 @@
 * {
-    margin: 0;
-    padding:0;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 /* 
 Primary color #FF9900 warm orange #8BC34A NEON GREEN
 Secondary color #4CAF50 deep green #673AB7 DEEP PURPLE
 BACKGROUND COLOUR WHITE OR LIGHT BEIGR #F5F5F5 2F2F2F DARK GRAY OR 1A1A1A CHARCOAL
 ACCENT COL0R (calm blue) #2196F3  #FF9800 used to draw attention buttons links heading icons hover effect animated element*/
-:root{
-    --primary-color:#8BC34A;
-    --secondary-color:#673AB7;
-    --background-color: rgb(0, 0, 40);
-    --accent-color:#FF9800;
+:root {
+  --primary-color: #8bc34a;
+  --secondary-color: #673ab7;
+  --background-color: rgb(0, 0, 40);
+  --accent-color: #ff9800;
 }
 
 /* -------HEADER------- */
-body{
-    overflow-x: hidden;
-    overflow-y: hidden;
-    background-color: var(--background-color);
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: var(--background-color);
 }
 
 .load {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left:0;
-    width: 100%;
-    height: 3px;
-    background-color: #FF9800;
-    display: block;
-    z-index: 10000;
-    animation: loading 2s linear 1 forwards;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ff9800;
+  display: block;
+  z-index: 10000;
+  animation: loading 2s linear 1 forwards;
 }
 @keyframes loading {
-    from{
-        width:100%
-    }to{
-        width: 0%;
-    }
-}
-.header{
-    height: 100vh;
+  from {
     width: 100%;
-    background-image:linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('download (7).jfif');
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
+  }
+  to {
+    width: 0%;
+  }
+}
+.header {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("download (7).jfif");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
 }
 
-.header nav a img{
-    width:150px;
-    height:100px;
-    animation: appear 0.5s linear 1 forwards ;
+.header nav a img {
+  width: 150px;
+  height: 100px;
+  animation: appear 0.5s linear 1 forwards;
 }
 @keyframes appear {
-    from{
-        opacity: 0.5;
-    }to{
-        opacity:1;
-    }
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-#logo{
-    font-size: 2rem;
-    font-family: 'M PLUS 1p', system-ui;
-    font-weight: 700;
-    font-style: normal;
-    color: var(--accent-color);
-    flex: 1;
-    text-align: left;
-    animation: side linear 1s 1 forwards;
+#logo {
+  font-size: 2rem;
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--accent-color);
+  flex: 1;
+  text-align: left;
+  animation: side linear 1s 1 forwards;
 }
 @keyframes side {
-    from{
-        transform: translateX(-20px);
-        opacity: 0;
-
-    }to{
-        transform: translateX(0);
-        opacity: 1;
-    }
-    
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-nav{
-    display: flex;
-    padding: 1.5% 2%;
-    justify-content: space-between;
-    align-items: center;
+nav {
+  display: flex;
+  padding: 1.5% 2%;
+  justify-content: space-between;
+  align-items: center;
 }
-.nav-link{
-    flex: 2;
-    text-align: right;
+.nav-link {
+  flex: 2;
+  text-align: right;
 }
-.nav-link ul li{
-    font-family: 'M PLUS 1p', system-ui;
-    font-weight: 700;
-    list-style: none;
-    display: inline-block;
-    padding:2px 6px ;
+.nav-link ul li {
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 700;
+  list-style: none;
+  display: inline-block;
+  padding: 2px 6px;
 }
-.nav-link ul li a{
-    text-decoration: none;
-    font-size:1.4rem;
-    color:white;
-    letter-spacing: 1px;
-    
+.nav-link ul li a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: white;
+  letter-spacing: 1px;
 }
-.nav-link ul .link::after{
-    content:'' ;
-    width: 0%;
-    height:3px;
-    background-color: var(--accent-color);
-    display: block;
-    margin: auto;
-    
+.nav-link ul .link::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: var(--accent-color);
+  display: block;
+  margin: auto;
 }
-.nav-link ul .link:hover::after{
-    width: 100%;
-    transition: 0.5s;
-    cursor: pointer;
+.nav-link ul .link:hover::after {
+  width: 100%;
+  transition: 0.5s;
+  cursor: pointer;
 }
-.btn{
-    
-    outline: none;
-    font-family: 'M PLUS 1p', system-ui;
-    font-weight: 700;
-    padding:10px 12px;
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
-    border:1px solid var(--secondary-color);
-    background-color: var(--accent-color);
-    box-shadow: 0 0 10px darkblue;
-    position: relative;
-    cursor: pointer;
-    border-radius:10px;
-    letter-spacing: 0.5px;
-    
+.btn {
+  outline: none;
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 700;
+  padding: 10px 12px;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--accent-color);
+  box-shadow: 0 0 10px darkblue;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
 }
 
-
-.btn:hover{
-    
-    background: none;
-    transition: 0.5s;
-    border: 1px solid var(--secondary-color);
-    
-    
-
+.btn:hover {
+  background: none;
+  transition: 0.5s;
+  border: 1px solid var(--secondary-color);
 }
-.btn:active{
-    background-color: transparent;
-    transition: 0s;
-    transform: scale(0.98);
+.btn:active {
+  background-color: transparent;
+  transition: 0s;
+  transform: scale(0.98);
 }
-
 
 .textbox {
-    
-    color: white;
-    width: 100%;
-    left: 50%;
-    right: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    
+  color: white;
+  width: 100%;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-.header .textbox h1{
-    font-size: 62px;
-    font-family: "M PLUS 1p", system-ui;
-    font-weight: bolder;
-    animation: up 0.5s linear 1 forwards ;
+.header .textbox h1 {
+  font-size: 62px;
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: bolder;
+  animation: up 0.5s linear 1 forwards;
 }
 
-.header .textbox p{
-    letter-spacing: 1px;
-    font-size: 1.5rem;
-    font-family:'Otaku rant',system-ui;
-    margin: 10px 0 40px;
-    animation: up 1s linear 1 forwards ;
+.header .textbox p {
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-family: "Otaku rant", system-ui;
+  margin: 10px 0 40px;
+  animation: up 1s linear 1 forwards;
 }
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.container {
+  animation: up 1.2s linear 1 forwards;
+}
+.spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 215px;
+  height: 60px;
+  padding: 50px;
+  margin: 0 auto;
+  padding: 0px;
+  background-image: conic-gradient(
+    from var(--angle),
+    hsl(262, 100%, 30%),
+    var(--accent-color),
+    hsl(262, 100%, 30%)
+  );
+  animation: spins 1.5s linear 1.2s infinite;
+}
+@keyframes spins {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+.address {
+  z-index: 1000;
+  display: inline-block;
+  font-family: "M PLUS 1p", system-ui;
+  text-decoration: none;
+  box-shadow: 0 0 5px black;
+  color: white;
+  border: 1px solid var(--secondary-color);
+  background-color: hsl(262, 100%, 10%);
+  padding: 10px 15px 12px;
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+@keyframes up {
+  from {
+    opacity: 0.2;
 
-.container{
-    animation: up 1.2s linear 1 forwards ;
+    transform: translateY(50px);
+    color: rgba(255, 255, 255, 0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    color: rgb(255, 255, 255);
+  }
 }
-.spin{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 215px;
-    height: 60px;
-    padding: 50px 20px;
-    margin: 0 auto;
-    padding: 0px;
-    background-color: var(--accent-color);
-    animation: spins 1.5s linear 1.2s infinite;
+.address:hover {
+  border: 1px solid var(--secondary-color);
+  background: hsl(36, 100%, 50%);
+  transition: 0.5s;
 }
-
-.address{
-    z-index: 1000;
-    display: inline-block;
-    font-family: "M PLUS 1p",system-ui;
-    text-decoration: none;
-    box-shadow: 0 0 5px black;
-    color: white;
-    border: 1px solid var(--secondary-color);
-    background-color: hsl(262, 100%, 10%);
-    padding: 10px 24px 12px ;
-    position: relative;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    cursor: pointer;
-    box-sizing: border-box;
+.address:active {
+  transform: scale(0.98);
 }
-@keyframes up { 
-    from{
-        opacity: 0.2;
-        
-        transform: translateY(50px);
-        color: rgba(255, 255, 255, 0.5);
-    }to{
-        opacity: 1;
-        transform: translateY(0);
-        color: rgb(255, 255, 255);
-    }
-    
+#progress {
+  transition: 0.5s;
+  cursor: pointer;
 }
-.address:hover{
-    border: 1px solid var(--secondary-color);
-    background: hsl(36, 100%, 50%);
-    transition: 0.5s;
+nav svg {
+  display: none;
 }
-.address:active{
-    transform: scale(0.98);
-}
-#progress{
-    transition: 0.5s;
-    cursor: pointer;
-}
-nav svg{
-    display: none;
- }
-
 
 /* -------------------------------- */
 /* ----------LOGIN----------------- */
 /* -------------------------------- */
-.login{
-    display: none;
+.login {
+  display: none;
 }
-.login.active{
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 200;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    animation: appear 0.3s linear forwards;
+.login.active {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  animation: appear 0.3s linear forwards;
 }
-.login.active .form .btn-menu-icon{
-    text-align: right;
-    margin-right: 10px;
+.login.active .form .btn-menu-icon {
+  text-align: right;
+  margin-right: 10px;
 }
-.form .fa{
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
+.form .fa {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
 }
-.login.active .form{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: hsl(262, 100%, 28%);
-    width: 500px;
-    min-height: 400px;
-    border-radius: 50px;
-    padding: 20px;
+.login.active .form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(262, 100%, 28%);
+  width: 500px;
+  min-height: 400px;
+  border-radius: 50px;
+  padding: 20px;
 }
-.login.active .form .title ::after{
-    content:'';
-    width: 30px;
-    height: 3px;
-    background-color:var(--accent-color);
-    display: block;
-    margin: auto;
-    margin-top: 5px;
+.login.active .form .title ::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: var(--accent-color);
+  display: block;
+  margin: auto;
+  margin-top: 5px;
 }
-.login.active .form .title h1{
-    margin-top: -10px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: "Poppins",system-ui;
-    color: var(--primary-color);
-    font-size: 2rem;
-    letter-spacing: 1px;
+.login.active .form .title h1 {
+  margin-top: -10px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Poppins", system-ui;
+  color: var(--primary-color);
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
-form{
-    
-    margin: 0px auto;
+form {
+  margin: 0px auto;
 }
-.login.active .form label{
-    font-weight: 600;
-    font-family: "Poppins",system-ui;
-    font-size: 1.4rem;
-    color: var(--primary-color);
-    margin-left: 5px;
+.login.active .form label {
+  font-weight: 600;
+  font-family: "Poppins", system-ui;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-left: 5px;
 }
-::placeholder{
-    color: rgb(0, 0, 40);
+::placeholder {
+  color: rgb(0, 0, 40);
 }
 
-.login.active .form input{
-    margin: 5px 0px 10px -10px;
-    background-color: white;
-    border: none;
-    padding: 10px 30px 10px 10px;
-    color: rgb(0, 0, 40);
-    font-size: 1.2rem;
-    caret-color: #FF9800;
-    border: 2px solid var(--accent-color);
-    border-radius: 10px;
-    
+.login.active .form input {
+  margin: 5px 0px 10px -10px;
+  background-color: white;
+  border: none;
+  padding: 10px 30px 10px 10px;
+  color: rgb(0, 0, 40);
+  font-size: 1.2rem;
+  caret-color: #ff9800;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
 }
 
 .login.active .form {
-    letter-spacing: 1px;
-    font-family: "M PLUS 1p", system-ui;
+  letter-spacing: 1px;
+  font-family: "M PLUS 1p", system-ui;
 }
-.login.active .form label, .login.active .form input{
-    width: 90%;
+.login.active .form label,
+.login.active .form input {
+  width: 90%;
 }
-.login.active .form label:focus, .login.active .form input:focus{
-    outline: none;
-    border: 3px solid var(--accent-color);
+.login.active .form label:focus,
+.login.active .form input:focus {
+  outline: none;
+  border: 3px solid var(--accent-color);
 }
-.user{
-    display:flex;
-    align-items: center;
-    justify-content: center;
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.user .fa.fa-user{
-    pointer-events: none;
-    margin-left: -35px;
-    color: #939393;
+.user .fa.fa-user {
+  pointer-events: none;
+  margin-left: -35px;
+  color: #939393;
 }
-.password{
-    display:flex;
-    align-items: center;
-    justify-content: center;
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.password .fa.fa-eye{
-    cursor: pointer;
-    margin-left: -35px;
-    color: #939393;
+.password .fa.fa-eye {
+  cursor: pointer;
+  margin-left: -35px;
+  color: #939393;
 }
-.password i.active::before{
-    content:'\f070' ;
-    color: rgb(0, 0, 40);
+.password i.active::before {
+  content: "\f070";
+  color: rgb(0, 0, 40);
 }
-.login.active .form  span{
-    color: white;
-    letter-spacing: 0px;
-    font-size: 18px;
+.login.active .form span {
+  color: white;
+  letter-spacing: 0px;
+  font-size: 18px;
 }
-.login.active .form .signin{
-    width: 100%;
-    margin: 10px 0px 2px;
-    padding: 10px 12px 12px;
-    font-size: 1.5rem;
-    border-radius: 50px;
-    background-color: #FF9800;
-    border: none;
-    color: white;
-    cursor: pointer;
+.login.active .form .signin {
+  width: 100%;
+  margin: 10px 0px 2px;
+  padding: 10px 12px 12px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
-.login.active .form .signin:hover{
-    background-color: rgba(255, 153, 0, 0.94)
+.login.active .form .signin:hover {
+  background-color: rgba(255, 153, 0, 0.94);
 }
-.login.active a{
-    font-size: 18px;
-    font-weight: 700;
-    color: rgb(0, 0, 40);
-    text-decoration: none;
-} 
-.login.active p{
-    text-align: center;
+.login.active a {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(0, 0, 40);
+  text-decoration: none;
+}
+.login.active p {
+  text-align: center;
 }
 /* -------------------------------- */
 /* ----------SIGNIN----------------- */
 /* -------------------------------- */
-.signup{
-    display: none;
+.signup {
+  display: none;
 }
-.signup.active{
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 200;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    animation: appear 0.3s linear forwards;
+.signup.active {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  animation: appear 0.3s linear forwards;
 }
-.signup.active .form .btn-menu-icon{
-    text-align: right;
-    margin-right: 10px;
+.signup.active .form .btn-menu-icon {
+  text-align: right;
+  margin-right: 10px;
 }
-.form .fa{
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
-}
-.signup.active .form{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: hsl(262, 100%, 28%);
-    width: 500px;
-    min-height: 400px;
-    border-radius: 50px;
-    padding: 20px;
-}
-.signup.active .form .title ::after{
-    content:'';
-    width: 30px;
-    height: 3px;
-    background-color:var(--accent-color);
-    display: block;
-    margin: auto;
-    margin-top: 5px;
-}
-.signup.active .form .title h1{
-    margin-top: -10px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: "Poppins",system-ui;
-    color: var(--primary-color);
-    font-size: 2rem;
-    letter-spacing: 1px;
-}
-form{
-    
-    margin: 0px auto;
-}
-.signup.active .form .firstname label{
-    margin-left: -8px;
-}
-.signup.active .form .firstname{
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    margin:0px 16px
-}
-.name-container{
-    display:flex;
-    align-items: center;
-    justify-content:space-between;
-}
-.signup.active .form label{
-    font-weight: 600;
-    font-family: "Poppins",system-ui;
-    font-size: 1.4rem;
-    color: var(--primary-color);
-    margin-left: 5px;
-}
-::placeholder{
-    color: rgb(0, 0, 40);
-}
-
-.signup.active .form input{
-    margin: 5px 0px 10px -10px;
-    background-color: white;
-    border: none;
-    padding: 10px 30px 10px 10px;
-    color: rgb(0, 0, 40);
-    font-size: 1.2rem;
-    caret-color: #FF9800;
-    border: 2px solid var(--accent-color);
-    border-radius: 10px;
-    
-}
-a{
-    cursor: pointer;
+.form .fa {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
 }
 .signup.active .form {
-    letter-spacing: 1px;
-    font-family: "M PLUS 1p", system-ui;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(262, 100%, 28%);
+  width: 500px;
+  min-height: 400px;
+  border-radius: 50px;
+  padding: 20px;
 }
-.signup.active .form label, .signup.active .form input{
-    width: 90%;
+.signup.active .form .title ::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: var(--accent-color);
+  display: block;
+  margin: auto;
+  margin-top: 5px;
 }
-.signup.active .form label:focus, .signup.active .form input:focus{
-    outline: none;
-    border: 3px solid var(--accent-color);
+.signup.active .form .title h1 {
+  margin-top: -10px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Poppins", system-ui;
+  color: var(--primary-color);
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+form {
+  margin: 0px auto;
+}
+.signup.active .form .firstname label {
+  margin-left: -8px;
+}
+.signup.active .form .firstname {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 0px 16px;
+}
+.name-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.signup.active .form label {
+  font-weight: 600;
+  font-family: "Poppins", system-ui;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-left: 5px;
+}
+::placeholder {
+  color: rgb(0, 0, 40);
 }
 
-.user{
-    display:flex;
-    align-items: center;
-    justify-content: center;
+.signup.active .form input {
+  margin: 5px 0px 10px -10px;
+  background-color: white;
+  border: none;
+  padding: 10px 30px 10px 10px;
+  color: rgb(0, 0, 40);
+  font-size: 1.2rem;
+  caret-color: #ff9800;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
 }
-.user .fa.fa-user{
-    pointer-events: none;
-    margin-left: -35px;
-    color: #939393;
+a {
+  cursor: pointer;
 }
-.password{
-    display:flex;
-    align-items: center;
-    justify-content: center;
+.signup.active .form {
+  letter-spacing: 1px;
+  font-family: "M PLUS 1p", system-ui;
 }
-.password .fa.fa-eye{
-    cursor: pointer;
-    margin-left: -35px;
-    color: #939393;
+.signup.active .form label,
+.signup.active .form input {
+  width: 90%;
 }
-.password i.active::before{
-    content:'\f070' ;
-    color: rgb(0, 0, 40);
+.signup.active .form label:focus,
+.signup.active .form input:focus {
+  outline: none;
+  border: 3px solid var(--accent-color);
 }
-.signup.active .form  span{
-    color: white;
-    letter-spacing: 0px;
-    font-size: 18px;
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.signup.active .form .signin{
-    width: 100%;
-    margin: 10px 0px 2px;
-    padding: 10px 12px 12px;
-    font-size: 1.5rem;
-    border-radius: 50px;
-    background-color: #FF9800;
-    border: none;
-    color: white;
-    cursor: pointer;
+.user .fa.fa-user {
+  pointer-events: none;
+  margin-left: -35px;
+  color: #939393;
 }
-.signup.active .form .signin:hover{
-    background-color: rgba(255, 153, 0, 0.94)
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.signup.active a{
-    font-size: 18px;
-    font-weight: 700;
-    color: rgb(0, 0, 40);
-    text-decoration: none;
-} 
-.signup.active p{
-    text-align: center;
+.password .fa.fa-eye {
+  cursor: pointer;
+  margin-left: -35px;
+  color: #939393;
+}
+.password i.active::before {
+  content: "\f070";
+  color: rgb(0, 0, 40);
+}
+.signup.active .form span {
+  color: white;
+  letter-spacing: 0px;
+  font-size: 18px;
+}
+.signup.active .form .signin {
+  width: 100%;
+  margin: 10px 0px 2px;
+  padding: 10px 12px 12px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.signup.active .form .signin:hover {
+  background-color: rgba(255, 153, 0, 0.94);
+}
+.signup.active a {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(0, 0, 40);
+  text-decoration: none;
+}
+.signup.active p {
+  text-align: center;
 }
 
 /* toggle bars */
@@ -658,16 +663,14 @@ a{
     margin-left: 82px;
 }
 
- *//* floating toggle bar */
-.floating_togglebar{
-    display: none;
+ */ /* floating toggle bar */
+.floating_togglebar {
+  display: none;
 }
 
 /* the end of floating bar */
-    
-/*--------Anime you may know*/
 
- 
+/*--------Anime you may know*/
 
 /* .row{
     margin-top:5% ;
@@ -718,10 +721,6 @@ a{
     position: relative;
     font-size: 0.8rem;
 } */
-
-
-
-
 
 /* -------------------------LATEST NEWS--------------------- */
 /* .latest-news{
@@ -788,10 +787,6 @@ a{
 .testimonial div h3{
     font-size: 20px;
 } */
-
-
-
-
 
 /*-------CALL TO ACTION-----------*/
 /* #contact{
@@ -902,4 +897,3 @@ h5{
     color:var(--primary-color);
     font-size: 20px;
 } */
- 
