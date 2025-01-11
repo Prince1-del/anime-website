@@ -197,7 +197,7 @@ nav{
     position: relative;
     width: 215px;
     height: 60px;
-    padding: 50px;
+    padding: 50px 20px;
     margin: 0 auto;
     padding: 0px;
     background-color: var(--accent-color);
