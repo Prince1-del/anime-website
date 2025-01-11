@@ -186,11 +186,7 @@ nav{
     margin: 10px 0 40px;
     animation: up 1s linear 1 forwards ;
 }
-@property --angle{
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
-}
+
 .container{
     animation: up 1.2s linear 1 forwards ;
 }
@@ -204,17 +200,10 @@ nav{
     padding: 50px;
     margin: 0 auto;
     padding: 0px;
-    background-image: conic-gradient(from var(--angle),hsl(262, 100%, 30%),var(--accent-color), hsl(262, 100%, 30%));
+    background-color: var(--accent-color);
     animation: spins 1.5s linear 1.2s infinite;
 }
-@keyframes spins {
-    from{
-        --angle:0deg
-    }to{
-        --angle:360deg
-    }
-    
-}
+
 .address{
     z-index: 1000;
     display: inline-block;
