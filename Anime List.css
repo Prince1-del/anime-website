@@ -1,0 +1,1075 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppin", system-ui;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary-color: #8bc34a;
+  --secondary-color: #673ab7;
+  --background-color: rgb(0, 0, 40);
+  --accent-color: #ff9800;
+}
+.load {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ff9800;
+  display: block;
+  z-index: 10000;
+  animation: loading 2s linear 1 forwards;
+}
+@keyframes loading {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+/* -------HEADER------- */
+body {
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+a {
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* -------------------------------- */
+/* ----------LOGIN----------------- */
+/* -------------------------------- */
+.login {
+  display: none;
+}
+.login.active {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  animation: appear 0.3s linear forwards;
+}
+.login.active .form .btn-menu-icon {
+  text-align: right;
+  margin-right: 10px;
+}
+.form .fa {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+.login.active .form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(262, 100%, 28%);
+  width: 500px;
+  min-height: 400px;
+  border-radius: 50px;
+  padding: 20px;
+}
+.login.active .form .title ::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: var(--accent-color);
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+}
+.login.active .form .title h1 {
+  margin-top: -10px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Poppins", system-ui;
+  color: var(--primary-color);
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+form {
+  margin: 0px auto;
+}
+.login.active .form label {
+  font-weight: 600;
+  font-family: "Poppins", system-ui;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-left: 5px;
+}
+::placeholder {
+  color: rgb(0, 0, 40);
+}
+
+.login.active .form input {
+  margin: 5px 0px 10px -10px;
+  background-color: white;
+  border: none;
+  padding: 10px 30px 10px 10px;
+  color: rgb(0, 0, 40);
+  font-size: 1.2rem;
+  caret-color: #ff9800;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+}
+
+.login.active .form {
+  letter-spacing: 1px;
+  font-family: "M PLUS 1p", system-ui;
+}
+.login.active .form label,
+.login.active .form input {
+  width: 90%;
+}
+.login.active .form label:focus,
+.login.active .form input:focus {
+  outline: none;
+  border: 3px solid var(--accent-color);
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user .fa.fa-user {
+  pointer-events: none;
+  margin-left: -35px;
+  color: #939393;
+}
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.password .fa.fa-eye {
+  cursor: pointer;
+  margin-left: -35px;
+  color: #939393;
+}
+.password i.active::before {
+  content: "\f070";
+  color: rgb(0, 0, 40);
+}
+.login.active .form span {
+  color: white;
+  letter-spacing: 0px;
+  font-size: 18px;
+}
+.login.active .form .signin {
+  width: 100%;
+  margin: 10px 0px 2px;
+  padding: 10px 12px 12px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.login.active .form .signin:hover {
+  background-color: rgba(255, 153, 0, 0.94);
+}
+.login.active a {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(0, 0, 40);
+  text-decoration: none;
+}
+.login.active p {
+  text-align: center;
+}
+/* -------------------------------- */
+/* ----------SIGNIN----------------- */
+/* -------------------------------- */
+.signup {
+  display: none;
+}
+.signup.active {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  animation: appear 0.3s linear forwards;
+}
+.signup.active .form .btn-menu-icon {
+  text-align: right;
+  margin-right: 10px;
+}
+.form .fa {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+.signup.active .form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(262, 100%, 28%);
+  width: 500px;
+  min-height: 400px;
+  border-radius: 50px;
+  padding: 20px;
+}
+.signup.active .form .title ::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: var(--accent-color);
+  display: block;
+  margin: auto;
+  margin-top: 5px;
+}
+.signup.active .form .title h1 {
+  margin-top: -10px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Poppins", system-ui;
+  color: var(--primary-color);
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+form {
+  margin: 0px auto;
+}
+.signup.active .form .firstname label {
+  margin-left: -8px;
+}
+.signup.active .form .firstname {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 0px 16px;
+}
+.name-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.signup.active .form label {
+  font-weight: 600;
+  font-family: "Poppins", system-ui;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-left: 5px;
+}
+::placeholder {
+  color: rgb(0, 0, 40);
+}
+
+.signup.active .form input {
+  margin: 5px 0px 10px -10px;
+  background-color: white;
+  border: none;
+  padding: 10px 30px 10px 10px;
+  color: rgb(0, 0, 40);
+  font-size: 1.2rem;
+  caret-color: #ff9800;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+}
+a {
+  cursor: pointer;
+}
+.signup.active .form {
+  letter-spacing: 1px;
+  font-family: "M PLUS 1p", system-ui;
+}
+.signup.active .form label,
+.signup.active .form input {
+  width: 90%;
+}
+.signup.active .form label:focus,
+.signup.active .form input:focus {
+  outline: none;
+  border: 3px solid var(--accent-color);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user .fa.fa-user {
+  pointer-events: none;
+  margin-left: -35px;
+  color: #939393;
+}
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.password .fa.fa-eye {
+  cursor: pointer;
+  margin-left: -35px;
+  color: #939393;
+}
+.password i.active::before {
+  content: "\f070";
+  color: rgb(0, 0, 40);
+}
+.signup.active .form span {
+  color: white;
+  letter-spacing: 0px;
+  font-size: 18px;
+}
+.signup.active .form .signin {
+  width: 100%;
+  margin: 10px 0px 2px;
+  padding: 10px 12px 12px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.signup.active .form .signin:hover {
+  background-color: rgba(255, 153, 0, 0.94);
+}
+.signup.active a {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(0, 0, 40);
+  text-decoration: none;
+}
+.signup.active p {
+  text-align: center;
+}
+
+/* ------------------------------- */
+/* -------------NAVBAR----------- */
+/* ------------------------------ */
+.header {
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("anime list.jpg");
+  background-position: center;
+  background-size: 100% 200%;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.header nav a img {
+  width: 150px;
+  height: 100px;
+  animation: appear 0.5s linear 1 forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#logo {
+  font-size: 2rem;
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--accent-color);
+  flex: 1;
+  text-align: left;
+  animation: side linear 1s 1 forwards;
+}
+@keyframes side {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+nav {
+  display: flex;
+  padding: 1.5% 2%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-link {
+  flex: 2;
+  text-align: right;
+}
+.nav-link ul li {
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 700;
+  list-style: none;
+  display: inline-block;
+  padding: 2px 6px;
+}
+.nav-link ul li a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: white;
+  letter-spacing: 1px;
+}
+.nav-link ul .link::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: var(--accent-color);
+  display: block;
+  margin: auto;
+}
+.nav-link ul .link:hover::after {
+  width: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.btn {
+  outline: none;
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 700;
+  padding: 10px 12px;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--accent-color);
+  box-shadow: 0 0 10px darkblue;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  background: none;
+  transition: 0.5s;
+  border: 1px solid var(--secondary-color);
+}
+.btn:active {
+  background-color: transparent;
+  transition: 0s;
+  transform: scale(0.98);
+}
+
+.textbox {
+  color: white;
+  width: 100%;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header .textbox h1 {
+  font-size: 62px;
+  font-family: "M plus 1p", system-ui;
+  font-weight: bolder;
+  animation: up 1s linear 1 forwards;
+}
+@keyframes up {
+  from {
+    opacity: 0.2;
+    transform: translateY(50px);
+    color: rgba(255, 255, 255, 0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    color: rgb(255, 255, 255);
+  }
+}
+nav svg {
+  display: none;
+}
+/* ------------TOGGLE BAR------------------ */
+.togglebar {
+  position: sticky;
+  top: 200px;
+  width: 138px;
+  margin-left: -5px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+  font-family: "M PLUS 1p", system-ui;
+  animation: toggle 1.5s linear 1 alternate;
+}
+@keyframes toggle {
+  10% {
+    opacity: 0.2;
+    left: -80px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+.toggle {
+  width: 100%;
+  height: 50px;
+  margin-left: -85px;
+
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: var(--accent-color);
+  border: 3px solid var(--secondary-color);
+  transition: 0.5s;
+  z-index: 200;
+}
+.toggle1 {
+  width: 100%;
+  height: 50px;
+  margin-left: -85px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: var(--accent-color);
+  border: 3px solid var(--secondary-color);
+  transition: 0.5s;
+}
+.toggle p {
+  position: relative;
+  display: inline;
+  top: 22%;
+  left: 3%;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  z-index: 200;
+}
+.toggle1 p {
+  position: relative;
+  display: inline;
+  top: 22%;
+  left: 2%;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+}
+.el1 svg {
+  position: absolute;
+  left: -55%;
+  top: 0;
+  transition: 0.5s;
+}
+.el2 svg {
+  position: absolute;
+  left: -55%;
+  top: 34.5%;
+  transition: 0.5s;
+}
+
+.toggle1 svg {
+  position: absolute;
+  left: -55%;
+  top: 68.5%;
+  transition: 0.5s;
+}
+.toggle:hover {
+  margin-left: 0px;
+}
+.toggle:hover svg {
+  margin-left: 80px;
+}
+.toggle1:hover {
+  margin-left: 0px;
+}
+.toggle1:hover svg {
+  margin-left: 82px;
+}
+.floating_togglebar {
+  display: none;
+}
+/* -----------------CONTENT--------------------- */
+.img {
+  animation: up 2s linear 1 forwards;
+  margin-bottom: 100px;
+}
+@keyframes scrollup {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+li {
+  animation: scrollup 3s both;
+  animation-timeline: view(70% 10%);
+}
+@keyframes header {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(2);
+    transform: translateY(0px);
+  }
+}
+
+h2 {
+  animation: header 3s both;
+  animation-timeline: view(50% 0%);
+}
+.anime {
+  width: 80%;
+  margin: 0.5% auto 0px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.anime h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: "M PLUS 1p", system-ui;
+}
+.anime p {
+  color: var(--accent-color);
+  font-family: "Otaku rant", system-ui;
+  font-size: 20px;
+
+  line-height: 22px;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+.anime-col h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-family: "M PLUS 1p", system-ui;
+  animation: header 3s both;
+  animation-timeline: view(50% 0%);
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.anime-col {
+  flex-basis: 32%;
+  background: rgba(104, 58, 183, 0.472);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  margin-left: 2px;
+  margin-right: 2px;
+  animation: popup 3s both;
+  animation-timeline: view(50% 0%);
+}
+.anime-col ul li {
+  text-align: left;
+  list-style: disc;
+  margin-left: 20px;
+  font-family: "Otaku rant", system-ui;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+}
+.tab_btns {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  animation: scrollup 3s both;
+  animation-timeline: view(70% 10%);
+}
+.tab_btns .button1 {
+  border: none;
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 800;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  color: var(--accent-color);
+  padding: 10px 25px;
+  transition: 0.5s;
+}
+.tab_btns .button1:hover {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  color: white;
+}
+.tab_btns .button1.active {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  color: white;
+}
+.tab_btns .button1.active:hover {
+  background-color: rgba(104, 58, 183, 0.6);
+  border: 2px solid rgba(104, 58, 183, 0.6);
+  color: white;
+}
+
+.content_img {
+  display: none;
+}
+.content_img.active {
+  font-family: "Poppin", system-ui;
+  display: block;
+}
+.row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.row.second,
+.row.third {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.row.third .anime2-col img {
+  width: 100%;
+  height: 500px;
+}
+
+.images {
+  text-align: center;
+  font-size: 36px;
+  margin: auto;
+  padding-top: 10px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.layer h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 12px 0;
+}
+.anime-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.9);
+}
+.anime2-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 10px;
+  animation: popup 3s both;
+  animation-timeline: view(50% 0%);
+}
+.anime2-col img {
+  width: 100%;
+  height: 350px;
+  display: block;
+}
+.anime2-col p {
+  margin: auto;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 5px;
+  font-family: "M PLUS 1p", system-ui;
+  color: var(--accent-color);
+  position: relative;
+  font-size: 1rem;
+}
+.anime2-col p span {
+  white-space: nowrap;
+}
+.anime2-col p a button {
+  border-radius: 20%;
+  background-color: transparent;
+}
+.anime2-col p a button:active {
+  transform: scale(0.97);
+}
+.anime2-col p a button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px black;
+}
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.layer:hover {
+  background: rgba(2, 32, 255, 0.2);
+}
+.layer h3 {
+  width: 100%;
+  font-weight: 900;
+  font-family: "Poppin", system-ui;
+  color: white;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h3 {
+  text-shadow: 0 0 10px var(--accent-color);
+  bottom: 45%;
+  opacity: 1;
+}
+button :focus {
+  border: 1px solid transparent;
+  outline: none;
+}
+
+/* ---------------------------- */
+/* ---------VIDEO-------------- */
+/* ---------------------------- */
+.video {
+  position: relative;
+  width: 100%;
+  margin-top: -15%;
+  margin-bottom: 100px;
+  animation: popup 3s both;
+  animation-timeline: view(50% 0%);
+}
+.video img {
+  transition: 1s ease-in-out;
+  background-color: none;
+  width: 100%;
+  height: 100%;
+}
+video {
+  transition: 1s ease-in-out;
+  background-color: none;
+  width: 100%;
+  height: 100%;
+}
+.el {
+  object-fit: cover;
+}
+.video h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: "M PLUS 1p", system-ui;
+}
+.video .vid_slider {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1050px;
+  height: 600px;
+  overflow: hidden;
+}
+.video .vid_slider .vid-container {
+  width: 100000px;
+  display: flex;
+  left: -1050px;
+  position: relative;
+}
+
+.video .vid_slider .vid-container.next {
+  animation: slide 1.5s linear 1 forwards;
+}
+@keyframes slide {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -1050px;
+  }
+}
+.video .vid_slider .vid-container.prev {
+  animation: prev 1.5s linear 1 forwards;
+}
+/* 10 20 20 25 15 6 */
+@keyframes prev {
+  from {
+    left: -2100px;
+  }
+  to {
+    left: -1050px;
+  }
+  /* 0%{
+        left: -1010px;
+    }
+    6%{
+        left: -960px;
+    }
+    21%{
+        left: -840px;
+    }
+    46%{
+        left: -600px;
+    }
+    66%{
+        left: -360px;
+    }
+    86%{
+        left: -120px;
+    }
+
+    96%{
+        left: 0px;
+    }
+    100%{
+        left: 0px;
+    } */
+}
+
+.video .vid_slider .vid-container .item {
+  width: 1050px;
+  height: 600px;
+  position: relative;
+}
+.video .vid_slider .vid-container .item h3 {
+  position: absolute;
+  width: 100%;
+  color: var(--accent-color);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+.video .vid_slider .buttons {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+.video .vid_slider .button {
+  pointer-events: visible;
+  width: 20%;
+  height: 75%;
+}
+.video .vid_slider .buttons .fa {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  opacity: 0;
+}
+
+.video .vid_slider .button:hover .fa {
+  background-color: var(--primary-color);
+  transform: translateX(0px);
+  opacity: 1;
+  color: var(--background-color);
+  cursor: pointer;
+  transition: 1s;
+}
+.video .vid_slider .buttons .fa:hover {
+  transition: 0.2s;
+  filter: drop-shadow(0 0 10px black);
+}
+.video .vid_slider .fa-chevron-circle-left {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 10;
+  transform: translateY(-50%);
+  transform: translateX(-100px);
+}
+.video .vid_slider .fa-chevron-circle-right {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  transform: translateX(100px);
+}
+
+/* -------------FOOTER--------- */
+.footer {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background-color: hsl(262, 88%, 42%);
+  min-height: 200px;
+}
+.footer h4 {
+  color: var(--primary-color);
+  font-family: "M PLUS 1p", system-ui;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.footer p {
+  color: var(--accent-color);
+  font-family: "Otaku rant", system-ui;
+  font-size: 18px;
+  word-spacing: 2px;
+}
+.footer .socialmedia {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px auto;
+}
+.footer .socialmedia div:hover {
+  background-color: #7f48df;
+}
+.footer .socialmedia div:hover .fa {
+  color: white;
+}
+.footer .socialmedia div {
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 35px;
+  height: 35px;
+  background-color: beige;
+  border-radius: 50%;
+}
+.footer .icon .socialmedia a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+.footer .icon .socialmedia .fa {
+  font-size: 1.5rem;
+}
+.footer .last .fa {
+  color: red;
+}
+
+h5 {
+  color: var(--primary-color);
+  padding-top: 30px;
+  font-family: "M PLUS 1p", system-ui;
+}
