@@ -374,7 +374,7 @@
     box-shadow: 0 0 50px black;
     text-align: left;
     z-index: 2;
-    animation: come 1s linear forwards;
+    animation: come 0.5s linear forwards;
   }
   @keyframes come {
     from {
