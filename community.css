@@ -10,6 +10,9 @@
   --background-color: rgb(0, 0, 40);
   --accent-color: #ff9800;
 }
+html {
+  overflow-y: auto;
+}
 .load {
   content: "";
   position: absolute;
