@@ -6,8 +6,8 @@ let nextbtn = document.querySelector("#right");
 const slider = document.querySelector(".vid-container");
 let prevbtn = document.querySelector("#left");
 let timeOut = 1500;
-let timeRunning = 50000;
 let autoOut;
+let timeRunning = 20000;
 let autoNext = setTimeout(() => {
   nextbtn.click();
 }, timeRunning);
@@ -25,13 +25,25 @@ function showmenu(type) {
     slider.appendChild(itemslider[0]);
     slider.classList.remove("prev");
     slider.classList.add("next");
-    videos.loop = true;
+    videos.forEach((video) => {
+      videos.forEach((otherVideo) => {
+        if (otherVideo !== video) {
+          otherVideo.muted = true;
+        }
+      });
+    });
   } else if (type === "prev") {
     let itemslider = document.querySelectorAll(".vid-container .item");
     slider.prepend(slider.querySelector(".item:last-child"));
     slider.classList.remove("next");
     slider.classList.add("prev");
-    videos.loop = true;
+    videos.forEach((video) => {
+      videos.forEach((otherVideo) => {
+        if (otherVideo !== video) {
+          otherVideo.muted = true;
+        }
+      });
+    });
   }
 
   clearTimeout(autoOut);
@@ -50,19 +62,12 @@ function showmenu(type) {
 // Select all video elements
 const videos = document.querySelectorAll("video");
 let currentlyPlayingVideo = null;
+
 // Add event listeners to each video
 videos.forEach((video) => {
+  video.loop = true;
+
   video.addEventListener("mouseover", () => {
-    // MUTE all other videos
-    videos.forEach((otherVideo) => {
-      if (otherVideo !== video) {
-        otherVideo.muted = true;
-      }
-    });
-    video.play();
-    video.muted = false;
-  });
-  video.addEventListener("click", () => {
     // MUTE all other videos
     videos.forEach((otherVideo) => {
       if (otherVideo !== video) {
