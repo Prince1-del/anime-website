@@ -7,7 +7,7 @@ const slider = document.querySelector(".vid-container");
 let prevbtn = document.querySelector("#left");
 let timeOut = 1500;
 let autoOut;
-let timeRunning = 20000;
+let timeRunning = 30000;
 let autoNext = setTimeout(() => {
   nextbtn.click();
 }, timeRunning);
