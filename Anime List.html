@@ -60,37 +60,68 @@
         </div>
     </section>
     <section class="signup">
-        <div class="form">
-            <div class="btn-menu-icon">
-                <i class="fa fc fa-close"></i>
-            </div>
-            <div class="title">
-                <h1>
-                    SIGN UP
-                </h1>
-            </div>
-            
-            <form action="">
-                <label for="email">Username</label>
-                <div class="user">
-                    
-                    <input maxlength="36ch" autofill="false" id="email"type="email" placeholder="Enter Username or Email" required >
-                    <i class="fa fa-user"></i> 
-                </div>
-                <label for="password">Password</label>
-                <div class="password">
-                    <input maxlength="12ch" id="password"type="password" placeholder="Password" required>
-                    <i class="fa fa-eye"></i>
-                </div>
-                
-                
-                <button type="submit" class="signin"><i class="fa fa-sign-in"></i> Sign in</button>
-            </form>
-            <p>
-                <span>Already have an account?</span>  <a id="login_switch">Login</a>
-
-            </p>
+      <div class="form">
+        <div class="btn-menu-icon">
+          <i class="fa fc fa-close"></i>
         </div>
+        <div class="title">
+          <h1>SIGN UP</h1>
+        </div>
+
+        <form action="">
+          <div class="name-container">
+            <div class="firstname">
+              <label for="name">First Name</label>
+              <input
+                type="text"
+                placeholder="First Name"
+                class="name"
+                required
+              />
+            </div>
+            <div class="firstname">
+              <label for="name">Last Name</label>
+              <input
+                type="email"
+                placeholder="Last Name"
+                class="name"
+                required
+              />
+            </div>
+          </div>
+
+          <label for="email">Email Address</label>
+          <div class="user">
+            <input
+              maxlength="36ch"
+              autofill="false"
+              id="email"
+              type="email"
+              placeholder="Enter Your Email"
+              required
+            />
+            <i class="fa fa-user"></i>
+          </div>
+          <label for="password">Password</label>
+          <div class="password">
+            <input
+              maxlength="12ch"
+              id="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <i class="fa fa-eye"></i>
+          </div>
+
+          <button type="submit" class="signin">
+            <i class="fa fa-sign-in"></i> Sign in
+          </button>
+        </form>
+        <p>
+          <span>Already have an account?</span> <a id="login_switch">Login</a>
+        </p>
+      </div>
     </section>
     <section class="header">
         
