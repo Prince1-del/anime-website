@@ -189,7 +189,7 @@ nav {
   animation: up 1.3s linear 1 forwards;
 }
 .container.author > p{
-  color: #ff9800;
+  color: #ff9800!important 
 }
 .spin {
   display: flex;
