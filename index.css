@@ -184,6 +184,11 @@ nav {
 .container {
   animation: up 1.2s linear 1 forwards;
 }
+.container.author {
+  margin-top:50px;
+  color:var(--accent);
+  animation: up 1.3s linear 1 forwards;
+}
 .spin {
   display: flex;
   justify-content: center;
