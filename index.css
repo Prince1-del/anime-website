@@ -188,8 +188,8 @@ nav {
   margin-top:50px;
   animation: up 1.3s linear 1 forwards;
 }
-.container.author p{
-  color:var(--accent-color);
+.container.author > p{
+  color: #ff9800;
 }
 .spin {
   display: flex;
