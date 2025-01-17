@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-}
+} 
 /* 
 Primary color #FF9900 warm orange #8BC34A NEON GREEN
 Secondary color #4CAF50 deep green #673AB7 DEEP PURPLE
@@ -189,7 +189,7 @@ nav {
   animation: up 1.3s linear 1 forwards;
 }
 .container.author > p{
-  color: #ff9800!important;
+  color: var(--primary-color)!important;
   font-weight: 700;
   font-family: "M PLUS 1p", system-ui;
   font-size:1rem;
