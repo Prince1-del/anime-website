@@ -195,7 +195,7 @@ nav {
   font-size:1rem;
 }
 .container.author > p span{
-  white-space:no-wrap;
+  white-space:nowrap;
 }
 .spin {
   display: flex;
