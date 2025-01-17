@@ -191,6 +191,7 @@ nav {
 .container.author > p{
   color: #ff9800!important;
   font-weight: 700;
+  font-family: "M PLUS 1p", system-ui;
   
 }
 .spin {
